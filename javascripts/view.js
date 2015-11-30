@@ -196,20 +196,12 @@ function findPos(obj) {
 	document.getElementById("bg").load();
 	document.getElementById("bg").play();
 
-$('body').bind('touchstart', function () {
-                audio.play();
-            });
 
         /*iOS click event*/
-            /*
-        if(window.innerHeight <380){
-	       var onClick = function() {
-           audio.play(); // audio will load and then play
-        };
-
-        document.addEventListener('click', onClick, false);
-        }
-        */
+    	$('body').bind('touchstart', function () {
+                audio.play();
+            });
+        
         /*end of iOS click event*/
 
 
