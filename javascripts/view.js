@@ -2,6 +2,12 @@
 
 if(window.innerHeight <380){
 	$('#betterPortrait').show();
+	
+	var onClick = function() {
+           audio.play(); // audio will load and then play
+        };
+
+        document.addEventListener('click', onClick, false);
 }
 
 window.addEventListener("orientationchange", function() {
