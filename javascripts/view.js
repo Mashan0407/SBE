@@ -198,12 +198,11 @@ function findPos(obj) {
 
 
         /*iOS click event*/
-        var ua = navigator.userAgent;
-        if (ua.indexOf('iPad') > -1 || ua.indexOf('iPhone') > -1) {
-            $('body').bind('touchend', function () {
-                audio.play();
-            });
-        }
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) { 
+ 		$('body').bind('touchend', function () { 
+ 		audio.play(); 
+ 		}); 
+ 	}
         /*end of iOS click event*/
 
 
