@@ -221,9 +221,9 @@ function findPos(obj) {
 	document.getElementById("bg").load();
 	document.getElementById("bg").play();
 
-
+audio.play();
         /*iOS click event*/
-            
+            /*
         if(window.innerHeight <380){
 	       var onClick = function() {
            audio.play(); // audio will load and then play
@@ -231,6 +231,7 @@ function findPos(obj) {
 
         document.addEventListener('click', onClick, false);
         }
+        */
         /*end of iOS click event*/
 
 
