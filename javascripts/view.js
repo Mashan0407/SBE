@@ -7,7 +7,7 @@ if(window.innerHeight <380){
            audio.play(); // audio will load and then play
         };
 
-        document.addEventListener('click', onClick, false);
+        window.addEventListener('click', onClick, false);
 }
 
 window.addEventListener("orientationchange", function() {
