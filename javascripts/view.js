@@ -2,6 +2,31 @@
 
 if(window.innerHeight <380){
 	$('#betterPortrait').show();
+	var audio = document.createElement("audio");
+	audio.id = "bg";
+	audio.my_id="bg";
+	audio.src="sounds/yeti/2/bg.mp3";
+	audio.preload = "auto";
+	audio.loop = "true";
+	audio.appendChild(src);
+
+
+	document.getElementById("WhatsThatSound").appendChild(audio);
+
+
+	document.getElementById("bg").load();
+	document.getElementById("bg").play();
+
+
+        /*iOS click event*/
+            
+        if(window.innerHeight <380){
+	   var onClick = function() {
+           audio.play();; // audio will load and then play
+        };
+
+        window.addEventListener('click', onClick, false);
+        }
 }
 
 window.addEventListener("orientationchange", function() {
@@ -197,11 +222,11 @@ function findPos(obj) {
 	document.getElementById("bg").play();
 
 
-        /*iOS click event*/
+        /*iOS click event
             
         if(window.innerHeight <380){
-	       var onClick = function() {
-           document.getElementById("bg").play();; // audio will load and then play
+	   var onClick = function() {
+           audio.play();; // audio will load and then play
         };
 
         window.addEventListener('click', onClick, false);
