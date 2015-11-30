@@ -18,7 +18,7 @@ if(window.innerHeight <380){
 	audio.appendChild(src);
 
 
-        window.onclick = function(){
+        this.onclick = function(){
         	audio.play();
         }
 }
