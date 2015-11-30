@@ -8,23 +8,6 @@ window.addEventListener("orientationchange", function() {
   // Announce the new orientation number
   if(window.innerHeight <350){
   	$('#betterPortrait').show();
-  	var src = document.createElement("source");
-	src.src="sounds/yeti/2/bg.mp3";
-	src.type="audio/mp3"
-	src.autoplay="audio/mp3"
-	src.loop="true"
-	
-	var audio = document.createElement("audio");
-	audio.id = "bg";
-	audio.my_id="bg";
-	audio.src="sounds/yeti/2/bg.mp3";
-	audio.preload = "auto";
-	audio.loop = "true";
-	audio.appendChild(src);
-
-
-        document.onclick = function(){
-	this.getElementById("bg").play();
         }
   }else{
   	$('#betterPortrait').hide();
