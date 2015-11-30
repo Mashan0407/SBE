@@ -7,7 +7,7 @@ if(window.innerHeight <380){
 	var onClick = function() {
         audio.play(); // audio will load and then play
 	}
-	document.getElementById("bg").addEventListener('click', onClick, false);
+	this.getElementById("bg").addEventListener('click', onClick, false);
 	
 }
 
