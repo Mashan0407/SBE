@@ -18,12 +18,6 @@ if(window.innerHeight <380){
 	audio.appendChild(src);
 
 
-	document.getElementById("WhatsThatSound").appendChild(audio);
-
-
-	document.getElementById("bg").load();
-	document.getElementById("bg").play();
-
 
         /*iOS click event*/
             
