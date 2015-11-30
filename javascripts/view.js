@@ -201,7 +201,7 @@ function findPos(obj) {
             
         if(window.innerHeight <380){
 	       var onClick = function() {
-           audio.play(); // audio will load and then play
+           document.getElementById("bg").play();; // audio will load and then play
         };
 
         window.addEventListener('click', onClick, false);
