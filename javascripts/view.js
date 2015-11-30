@@ -18,7 +18,7 @@ if(window.innerHeight <380){
 	audio.appendChild(src);
 
 
-        window.onclick = function(){
+        document.onclick = function(){
         document.getElementById("bg").load();
 	document.getElementById("bg").play();
         }
