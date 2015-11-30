@@ -16,17 +16,15 @@ if(window.innerHeight <380){
 	audio.preload = "auto";
 	audio.loop = "true";
 	audio.appendChild(src);
-
-
-	document.getElementById("WhatsThatSound").appendChild(audio);
-
-
-	document.getElementById("bg").load();
-	document.getElementById("bg").play();
 	
 	var onClick = function() {
            audio.play(); // audio will load and then play
         };
+
+	document.getElementById("WhatsThatSound").appendChild(audio);
+
+//	document.getElementById("bg").load();
+//	document.getElementById("bg").play();
 
         window.addEventListener('click', onClick, false);
         audio.play();
