@@ -2,31 +2,6 @@
 
 if(window.innerHeight <380){
 	$('#betterPortrait').show();
-	
-	var src = document.createElement("source");
-	src.src="sounds/yeti/2/bg.mp3";
-	src.type="audio/mp3"
-	src.autoplay="audio/mp3"
-	src.loop="true"
-
-	var audio = document.createElement("audio");
-	audio.id = "bg";
-	audio.my_id="bg";
-	audio.src="sounds/yeti/2/bg.mp3";
-	audio.preload = "auto";
-	audio.loop = "true";
-	audio.appendChild(src);
-	
-	var onClick = function() {
-           document.getElementById("bg").play(); // audio will load and then play
-        };
-
-	document.getElementById("WhatsThatSound").appendChild(audio);
-
-        window.addEventListener('click', onClick, false);
-        audio.play();
-        
-	document.getElementById("bg").play();
 }
 
 window.addEventListener("orientationchange", function() {
