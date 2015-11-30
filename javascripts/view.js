@@ -18,12 +18,7 @@ if(window.innerHeight <380){
 	audio.appendChild(src);
 
 
-
-        /*iOS click event*/
-            
-        if(window.innerHeight <380){
-
-        document.onclick = function(){
+        window.onclick = function(){
         	audio.play();}
         }
 }
