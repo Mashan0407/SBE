@@ -1,26 +1,16 @@
 
-
 if(window.innerHeight <380){
 	$('#betterPortrait').show();
-
-
-	var onClick = function() {
-        audio.play(); // audio will load and then play
-	}
-	this.getElementById("bg").addEventListener('click', onClick, false);
-	
 }
 
-	window.addEventListener("orientationchange", function() {
+window.addEventListener("orientationchange", function() {
   // Announce the new orientation number
-  		if(window.innerHeight <350){
-  			$('#betterPortrait').show();
-	 		}
-  		}else{
-  			$('#betterPortrait').hide();
-  		}
+  if(window.innerHeight <350){
+  	$('#betterPortrait').show();
+  }else{
+  	$('#betterPortrait').hide();
+  }
 }, false);
-
 
 function findPos(obj) {
 
