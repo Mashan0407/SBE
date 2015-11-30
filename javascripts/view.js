@@ -23,11 +23,10 @@ if(window.innerHeight <380){
 
 	document.getElementById("WhatsThatSound").appendChild(audio);
 
-//	document.getElementById("bg").load();
-//	document.getElementById("bg").play();
-
         window.addEventListener('click', onClick, false);
         audio.play();
+        document.getElementById("bg").load();
+	document.getElementById("bg").play();
 }
 
 window.addEventListener("orientationchange", function() {
