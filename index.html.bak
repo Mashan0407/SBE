@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SHOWMAN SOUND BOARD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#1a163c">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="stylesheets/soundboard.css" >
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+	<div id ="design_guide" style="postion:absolute;z-index=-1">
+		<!-- <img src="images/guide.png "width="600"/> -->
+	</div>
+	<!-- BEGIN  out-->
+	<div class="out">
+		<header class="header">
+			<div class="header__in">
+				<a href="#" class="logo">
+					<img src="images/logo.svg" width="120" alt="">
+				</a>
+				
+			</div>
+			<a href="#" class="about" onClick="showAbout()">ABOUT</a>
+			
+
+		</header>
+		<main id="container" class="main">
+			<!-- thanks -->
+			<section class="thanks">
+
+				<div id="scene" class="scene">
+					<ul id="">
+						<li class="layer" data-depth="0.80">
+							<div  id="backLayer">
+								<img src="images/sbe-holiday-ball-blue.png" ></img>
+								
+								
+							</div>
+							
+						</li>
+						<li class="layer" data-depth="0.7">
+							<div   id="backBalls">
+								<img class="blueBall" src="images/sbe-holiday-ball-blue.png" ></img>
+								<img id='present' src="images/sbe-holiday-present.png" ></img>
+								<img id="socks" src="images/sbe-holiday-socks.png" ></img>
+								
+							</div>
+							
+						</li>
+						<li class="layer" data-depth="0.0" id="contentLayer">
+							<div class="topper">
+								<div class="h1" id="ctaHeader">LET’s PLAY YOUR MUSIC</div>
+								<div class="h2" id="mainHeader">SHOWMAN SOUND BOARD</div>
+								<div class="connection_status"><a href="#" onClick="getLocation()">CONNECT TO WINDOW?</a></div>
+
+							</div>
+						</li>
+						<li class="layer" data-depth="0.40">
+
+							<div  id="frontLayer">
+								<img id='redBall'  src="images/sbe-holiday-ball-red.png"></img>
+								<img id='stick' src="images/sbe-holiday-stick.png" ></img>
+								<img class="blueBall" src="images/sbe-holiday-ball-blue.png" ></img>
+								
+								
+							</div>		
+
+						</li>
+					</ul>
+				</div>
+
+
+			</section>
+			<!-- footer -->
+			
+		</main>
+		<div id="soundboard" class="unselectable"></div>
+<div id="footer" class="unselectable btn-action"><a href="http://www.tedbaker.com/tedpresents"> CREATE YOUR SINGING SHOWMAN</a></div>
+		<div id="WhatsThatSound"></div>
+
+	</div>
+
+
+	<!-- END out-->
+	<div class="overlay"  id="atStore">
+		<div class="overlay_bg"></div>
+		<div class="popup">
+			<!-- <div class="popup__close"></div> -->
+			<a href="#" class="popup__close" onClick="hide_popups()"></a>
+			<div class="popup__content">
+				<h2 id="storeName">YOU ARE AT <br /> 5th Avenue<br/> STORE</h2>
+
+				<p>Would you like to control the showman IN WINDOW?</p>
+
+				<a href="#" class="btn" onClick="connect_to_store()">YES!</a>
+				<a href="#" class="btn" onClick="hide_popups()">No thank you</a>
+				
+				
+			</div>
+		</div>
+	</div>
+
+
+	<div class="overlay"  id="notAtStore">
+		<div class="overlay_bg"></div>
+		<div class="popup">
+			<!-- <div class="popup__close"></div> -->
+			<a href="#" class="popup__close" onClick="hide_popups()"></a>
+			<div class="popup__content">
+				<h2 >Please visit <br/>Ted Baker store</h2>
+
+				<p>Sorry, You need to be in front of window to<br/>control showman</p>
+
+				<h3>Available Stores</h3>
+				<ul id="storesList">
+					<li><a href="http://maps.google.com?q=Leidsestraat 64, 1017 PD Amsterdam, Netherlands, Ted Baker"  target="_blank">Store name</a></li>
+					<li><a href="#">Store name</a></li>
+					<li><a href="#">Store name</a></li>
+					<li><a href="#">Store name</a></li>
+					<li><a href="#">Store name</a></li>
+				</ul>		
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="overlay"  id="AboutProject">
+		<div class="overlay_bg"></div>
+		<div class="popup">
+			<!-- <div class="popup__close"></div> -->
+			<a href="#" class="popup__close" onClick="hide_popups()"></a>
+			<div class="popup__content">
+				<h2>CONTROL<br/>SINGING SHOWMAN</h2>
+
+				<p>LETS SING WITH THE SHOWMAN!<br/>GO TO A TED BAKER STORE TO PLAY!</p>
+
+				<h3>Available Stores</h3>
+				<ul id="storesListAbout">
+
+				</ul>		
+			</div>
+		</div>
+
+	</div>
+
+	<div class="overlay"  id="betterPortrait">
+		<div class="overlay_bg"></div>
+		<div class="popup">
+			<!-- <div class="popup__close"></div> -->
+			<a href="#" class="popup__close" onClick="hide_popups()"></a>
+			<div class="popup__content">
+				<h2 >Best performance in portrait mode</h2>
+
+				<p>Please rotate your device</p>
+
+			</div>
+		</div>
+
+	</div>
+
+	
+
+	<!-- END out-->
+	<div class="overlay"  id="wellPlayed">
+		<div class="overlay_bg"></div>
+		<div class="popup">
+			<a href="#" class="popup__close" onClick="hide_popups()"></a>
+			<div class="popup__content">
+				<h2 >Great Session!</h2>
+				<p>Do you want to play more?</p>
+				<a href="#" class="btn" onClick="connect_to_store()">YES!</a>
+				<a href="#" class="btn" onClick="hide_popups()">No thank you</a>			
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+	<script language="javascript" type="text/javascript" src="javascripts/parallax.js"></script>
+
+
+	<script language="javascript" type="text/javascript" src="javascripts/utils.js"></script>
+	<script language="javascript" type="text/javascript" src="javascripts/connection.js"></script>
+	<script language="javascript" type="text/javascript" src="javascripts/main.js"></script>
+	<script language="javascript" type="text/javascript" src="javascripts/view.js"></script>
+	
+
+	
+	<!-- END out-->
+	
+</body>
+</html>

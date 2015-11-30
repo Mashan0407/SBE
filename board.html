@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#1a163c">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="stylesheets/soundboard.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+	<div id ="design_guide" style="postion:absolute;z-index=-1">
+		<!-- <img src="images/guide.png "width="600"/> -->
+	</div>
+	<!-- BEGIN  out-->
+	<div class="out">
+		<header class="header">
+			<div class="header__in">
+
+				<a href="#" class="logo">
+					<img src="images/logo.svg" width="120" alt="">
+				</a>
+				
+			</div>
+			<a href="#" class="about">ABOUT</a>
+
+		</header>
+		<main id="container" class="main">
+			<!-- thanks -->
+			<section class="thanks">
+				<div class="topper">
+					<div class="h1">LET’s PLAY YOUR MUSIC</div>
+					<div class="h2">SHOWMAN SOUND BOARD</div>
+					<div class="connection_status"></div>
+					
+				</div>
+
+			</section>
+			<!-- footer -->
+			
+		</main>
+		<div id="soundboard" class="unselectable"></div>
+
+	</div>
+	
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+
+
+	<script language="javascript" type="text/javascript" src="javascripts/utils.js"></script>
+	<script language="javascript" type="text/javascript" src="javascripts/connection.js"></script>
+	<script language="javascript" type="text/javascript" src="javascripts/main.js"></script>
+	<script language="javascript" type="text/javascript" src="javascripts/view.js"></script>
+	
+	<!-- END out-->
+	
+</body>
+</html>

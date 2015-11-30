@@ -1,0 +1,171 @@
+// getLocation();
+
+var storeId = getUrlParameter('storeId');
+console.log("storeId",storeId);
+
+if(window.innerWidth >1024){
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+}
+$('#mainHeader').text('dd');
+$('#ctaHeader').text('LET’s PLAY YOUR MUSIC');
+$('#mainHeader').text('SHOWMAN SOUND BOARD');
+$('.overlay_bg').click(hide_popups);
+
+var geo_data = ' [' +
+'{"id":0, "name":"Amsterdam" , "lat":"52.365428", "lon":"4.885157" , "address":"Leidsestraat 64, 1017 PD Amsterdam, Netherlands" },' +
+'{"id":1, "name":"Regent Street" , "lat":"51.514455", "lon":"-0.141933" , "address":"245 Regent Street, London, W1B 2EN"},' +
+'{"id":2, "name":"Glasgow - Buchanan Street" , "lat":"55.859440", "lon":"-4.254530" , "address":"61 Buchanan Street, Glasgow, G1 3HL"},' +
+'{"id":3, "name":"Bluewater" , "lat":"51.439163", "lon":"0.270177" , "address":"Unit L128, Lower Guild Hall , Bluewater Retail Park, Greenhithe, Kent, DA9 9SNL"},' +
+'{"id":4, "name":"Brompton Road" , "lat":"51.219448", "lon":"4.402464" , "address":"75 Brompton Road SW3 1DB"},' +
+'{"id":5, "name":"Floral Street" , "lat":"51.500208", "lon":"-0.162143" , "address":"9-10 Floral Street, Covent Garden, London, WC2E 9HW"},' +
+'{"id":6, "name":"Sheffield Meadowhall" , "lat":"53.413040", "lon":"-1.412461" , "address":"Unit 69, High Street, Upper Level, Meadowhall Centre, Sheffield, S. Yorkshire, S9 1EP"},' +
+'{"id":7, "name":"Liverpool One" , "lat":"53.465873", "lon":"-2.944525" , "address":"Liverpool One: Unit 10, 1 St. Peter Arcade, Liverpool, L1  3DE"},' +
+'{"id":8, "name":"Manchester" , "lat":"53.466179", "lon":"-2.349005" , "address":"UNIT U65, 137 REGENT CRESCENT THE TRAFFORD CENTRE MANCHESTER M17 8AR"},' +
+'{"id":9, "name":"Westfield White City" , "lat":"51.507202", "lon":"-0.223242" , "address":"White City 1: The Atrium,Unit 1011, Westfield, Aerial Way,  London, W12 7GB."},' +
+'{"id":10, "name":"Dublin" , "lat":"53.340634", "lon":"-6.260591", "address":"42 Grafton Street, Dublin, Dublin 2, Ireland" }]';
+
+var storesObj=JSON.parse(geo_data);
+
+
+
+
+$('.overlay').css('visibility',"visible");
+$('.overlay').hide();
+var myStore=new Object();
+
+function activate_fun(position){
+	console.log('your location', position);
+	
+
+	var store="";
+	myStore.id=5;
+	myStore.name='5thAvStore';
+
+	var json = '{"result":true,"count":1}', obj = JSON.parse(json); 
+	storesObj=JSON.parse(geo_data);
+	console.log(storesObj);
+	for (var i = 0; i < storesObj.length; i++) {
+		storesObj[i].distance=distance(storesObj[i].lat,storesObj[i].lon,position.coords.latitude,position.coords.longitude);
+		// console.log(storesObj[i].name,storesObj[i].distance,"miles away"); 
+		if(storesObj[i].distance <100){
+			store=storesObj[i].name;
+			myStore=storesObj[i];
+		};
+	};
+
+	
+
+	
+
+	if(storeId){
+		
+		store=storesObj[storeId].name;
+		myStore=storesObj[storeId];
+	}
+
+
+
+
+	//sort
+	function compare(a,b) {
+		if (a.distance < b.distance)
+			return -1;
+		if (a.distance > b.distance)
+			return 1;
+		return 0;
+	}
+
+	storesObj.sort(compare);
+	console.log("sorted");
+
+	//else store="none";
+
+
+	
+
+	if(store!=""){
+		$('#atStore').show();
+		$('#storeName').multiline('YOU ARE AT\n'+ store+'\nSTORE');
+	}else{
+		noStoresAround();
+
+		
+	}
+	
+
+	//alert("You are "+dist+" miles away from Ted Baker 5th av store, you can play");
+	// start_connection();
+}
+
+
+
+function noStoresAround(){
+
+	$('#storesList').empty(); 
+
+	for (var i = 0; i < storesObj.length; i++) {
+		// storesObj[i].distance=distance(storesObj[i].lat,storesObj[i].lon,position.coords.latitude,position.coords.longitude);
+		// // console.log(storesObj[i].name,storesObj[i].distance,"miles away"); 
+		var store_address=encodeURIComponent(storesObj[i].address +" Ted Baker" );
+		$('#storesList').append($('<li><a href=http://maps.google.com?q='+store_address+' target="_blank">'+storesObj[i].name+"    —" +storesObj[i].distance+ " km from you"+'</a></li>'));
+
+
+		// if(storesObj[i].distance <1)store=storesObj[i].name;
+	};
+
+
+
+	$('#notAtStore').show();
+
+
+}
+
+
+
+function showAbout(){
+
+	$('#storesListAbout').empty(); 
+
+	for (var i = 0; i < storesObj.length; i++) {
+		// storesObj[i].distance=distance(storesObj[i].lat,storesObj[i].lon,position.coords.latitude,position.coords.longitude);
+		// // console.log(storesObj[i].name,storesObj[i].distance,"miles away"); 
+		var store_address=encodeURIComponent(storesObj[i].address +" Ted Baker" );
+		$('#storesListAbout').append($('<li><a href=http://maps.google.com?q='+store_address+' target="_blank">'+storesObj[i].name+"    —" +storesObj[i].distance+ " km from you"+'</a></li>'));
+
+
+		// if(storesObj[i].distance <1)store=storesObj[i].name;
+	};
+
+
+
+	$('#AboutProject').show();
+
+
+}
+
+
+
+
+function hide_popups(){
+	$('.overlay').hide();
+}
+
+function connect_to_store(){
+	
+	$('#ctaHeader').text('YOU ARE CONNECTed to');
+	$('#mainHeader').text(myStore.name);
+	start_connection();
+	hide_popups();
+
+	toggle_bg_sound(false);
+}
+
+function disconected_from_store(){
+	$('#ctaHeader').text('LET’s PLAY YOUR MUSIC');
+	$('#mainHeader').text('SHOWMAN SOUND BOARD');
+	toggle_bg_sound(true);
+	$('#wellPlayed').show();
+}
+
+

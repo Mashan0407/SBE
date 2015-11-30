@@ -1,0 +1,256 @@
+<html>
+<head>
+
+	<style> body {
+		background-color: #000000;
+		padding: 0; margin: 0;} 
+
+
+		input {
+			width:25%;
+			height:33%;
+			color: rgba(21,216,128,0.75);
+			background: transparent;
+			outline: 1px solid rgba(21,216,128,0.75);
+			border: 0px;
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+		.active {
+			color: #000000;
+			background-color: rgba(21,216,128,0.75	);
+		}
+
+		input, textarea {
+			-webkit-appearance: none;
+			-webkit-border-radius: 0;
+		}
+
+		#WhatsThatSound{
+			display:none;
+		}
+
+	</style>
+
+
+
+</head>
+
+<body>
+
+
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+
+		
+
+
+
+		<div id="webgl_canvas"></div>
+		<div id="WhatsThatSound" name="WhatsThatSound" >
+			
+		</div>
+
+
+		<script language="javascript" type="text/javascript" >
+
+
+
+			var getUrlParameter = function getUrlParameter(sParam) {
+				var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				sURLVariables = sPageURL.split('&'),
+				sParameterName,
+				i;
+
+				for (i = 0; i < sURLVariables.length; i++) {
+					sParameterName = sURLVariables[i].split('=');
+
+					if (sParameterName[0] === sParam) {
+						return sParameterName[1] === undefined ? true : sParameterName[1];
+					}
+				}
+			};
+
+
+
+
+
+					// audio.appendChild(src);
+
+					var table = [
+					"1", "1.mp3",
+					"2", "2.mp3",
+					"3", "3.mp3",
+					"4", "4.mp3",
+					"5", "5.mp3",
+					"6", "6.mp3",
+					"7", "7.mp3",
+					"8", "8.mp3",
+					"9", "9.mp3",
+					"10", "10.mp3",
+					"11", "11.mp3",
+					"12", "12.mp3"
+					]
+
+
+
+					$('body').ready(function() {
+
+
+
+
+						for ( var i = 0; i < table.length; i += 2 ) {
+
+
+							var src = document.createElement("source");
+							src.src="sounds/yeti/2/"+table[i+1];
+							src.type="audio/mpeg"
+
+							var audio = document.createElement("audio");
+							audio.id = "a"+i;
+							audio.my_id=i;
+							audio.src="sounds/yeti/2/"+table[i+1];
+							audio.preload = "auto";
+							audio.appendChild(src);
+
+
+							document.getElementById("WhatsThatSound").appendChild(audio);
+
+
+							$(audio).on("loadeddata", function(){
+								socket.emit('join', 'audio '+$(this)[0].id);
+
+							}); 
+
+							document.getElementById("a"+i).load();
+
+
+
+							audio.addEventListener('ended',function(){
+
+								var btn_id="#b"+$(this)[0].my_id;
+								console.log("sound_ended",$(this),btn_id);
+								$(btn_id).removeClass('active');
+							});
+
+
+						}
+
+						var src = document.createElement("source");
+						src.src="sounds/yeti/2/bg.mp3";
+						src.type="audio/mpeg"
+						src.autoplay="audio/mpeg"
+						src.loop="true"
+
+						var audio = document.createElement("audio");
+						audio.id = "bg";
+						audio.my_id="bg";
+						audio.src="sounds/yeti/2/bg.mp3";
+						audio.preload = "auto";
+						audio.loop = "true";
+						audio.appendChild(src);
+
+
+						document.getElementById("WhatsThatSound").appendChild(audio);
+
+
+						document.getElementById("bg").load();
+						document.getElementById("bg").play();
+
+
+
+
+
+					});
+
+
+
+var statusInterval ;
+var st=window.location.href;
+var server_ip='http://sound.tedbakerpresents.com:3030/'
+var socket = io.connect(server_ip);
+
+var storeId = getUrlParameter('storeId');
+console.log(storeId);
+
+socket.on('connect', function(data) {
+	socket.emit('join', 'store'+storeId);
+
+
+	if(statusInterval)clearInterval(statusInterval);
+	statusInterval =setInterval(function(){
+		var msg_object=new Object();
+		msg_object.storeId=storeId;
+		socket.emit('storeStatus', JSON.stringify(msg_object));
+	}, 5000);
+
+	/* later */
+	
+
+});
+
+
+
+socket.on('messages', function(data) {
+
+	console.log("message_received");
+
+	var my_id;
+
+	for ( var i = 0; i < table.length; i += 2 ) {
+		if(data==table[i+1])my_id=i;
+
+	}
+
+	document.getElementById("a"+my_id).load();
+	document.getElementById("a"+my_id).play(); 
+	socket.emit('join', 'audio '+document.getElementById("a"+my_id));
+
+	console.log(document.getElementById("a"+my_id).my_id); 
+
+
+	$("#b"+my_id).addClass('active');
+
+
+
+
+});
+socket.on('restart', function(data) {
+	window.location.reload();
+
+});
+
+
+
+
+for ( var i = 0; i < table.length; i += 2 ) {
+
+
+	var button = document.createElement("input");
+	button.type = "button";
+	button.id = "b"+i;
+
+
+	button.innerHTML  = table[i];
+	button.value = table[i];
+	button.onclick = (function(opt) {
+
+		return function() {
+
+		};
+	})(table[i+1]);
+	document.getElementById("webgl_canvas").appendChild(button);
+
+
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

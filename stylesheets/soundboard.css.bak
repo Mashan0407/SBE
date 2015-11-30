@@ -1,0 +1,578 @@
+@import url("//hello.myfonts.net/count/2fbc70");
+
+
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset, a img { border: none; }
+
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
+table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+
+html { box-sizing: border-box; }
+
+* { box-sizing: border-box; }
+*:before, *:after { box-sizing: border-box; }
+
+@font-face { font-family: NeutrafaceCondensed-Titling; src: url("fonts/NeutrafaceCondensed-Titling.eot"); src: url("fonts/NeutrafaceCondensed-Titling.eot?#iefix") format("embedded-opentype"), url("fonts/NeutrafaceCondensed-Titling.woff2") format("woff2"), url("fonts/NeutrafaceCondensed-Titling.woff") format("woff"), url("fonts/NeutrafaceCondensed-Titling.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: NeutrafaceDisplayTitling; src: url("fonts/NeutrafaceDisplayTitling.eot"); src: url("fonts/NeutrafaceDisplayTitling.eot?#iefix") format("embedded-opentype"), url("fonts/NeutrafaceDisplayTitling.woff2") format("woff2"), url("fonts/NeutrafaceDisplayTitling.woff") format("woff"), url("fonts/NeutrafaceDisplayTitling.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: NeutrafaceDisplayBold; src: url("fonts/NeutrafaceDisplayBold.eot"); src: url("fonts/NeutrafaceDisplayBold.eot?#iefix") format("embedded-opentype"), url("fonts/NeutrafaceDisplayBold.woff2") format("woff2"), url("fonts/NeutrafaceDisplayBold.woff") format("woff"), url("fonts/NeutrafaceDisplayBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+/********font changes**************/
+/**
+ * @license
+ * MyFonts Webfont Build ID 3128432, 2015-11-19T16:50:31-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FuturaBT-BoldCondensed by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/futura/bold-condensed/
+ * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3128432
+ * 
+ * ? 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+  
+@font-face {font-family: "FuturaBT-BoldCondensed";src: url("webfonts/2FBC70_0_0.eot"); src: url("webfonts/2FBC70_0_0.eot?#iefix") format("embedded-opentype"),
+    url("webfonts/2FBC70_0_0.woff2") format("woff2"),
+    url("webfonts/2FBC70_0_0.woff") format("woff"),
+    url("webfonts/2FBC70_0_0.ttf") format("truetype");
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face { font-family:  FuturaW01-MediumOblique; src: 
+    url("webfonts/FuturaW01-MediumOblique.eot"); src: 
+    url("webfonts/FuturaW01-MediumOblique.eot?#iefix") format("embedded-opentype"), 
+    url("webfonts/FuturaW01-MediumOblique.woff2") format("woff2"), 
+    url("webfonts/FuturaW01-MediumOblique.woff") format("woff"), 
+    url("webfonts/FuturaW01-MediumOblique.ttf") format("truetype"), 
+    url("webfonts/FuturaW01-MediumOblique.svg") format("svg"); 
+    font-weight: normal; 
+    font-style: normal;}
+@font-face { font-family:  FuturaW01Heavy; src: 
+    url("webfonts/FuturaW01Heavy.eot"); src: 
+    url("webfonts/FuturaW01Heavy.eot?#iefix") format("embedded-opentype"), 
+    url("webfonts/FuturaW01Heavy.woff2") format("woff2"), 
+    url("webfonts/FuturaW01Heavy.woff") format("woff"), 
+    url("webfonts/FuturaW01Heavy.ttf") format("truetype"), 
+    url("webfonts/FuturaW01Heavy.svg") format("svg"); 
+    font-weight: normal; 
+    font-style: normal;}
+@font-face { font-family:  FuturaW01Light; src: 
+    url("webfonts/FuturaW01Light.eot"); src: 
+    url("webfonts/FuturaW01Light.eot?#iefix") format("embedded-opentype"), 
+    url("webfonts/FuturaW01Light.woff2") format("woff2"), 
+    url("webfonts/FuturaW01Light.woff") format("woff"), 
+    url("webfonts/FuturaW01Light.ttf") format("truetype"), 
+    url("webfonts/FuturaW01Light.svg") format("svg"); 
+    font-weight: normal; 
+    font-style: normal;}
+@font-face {
+    font-family: 'FuturaMedium';
+    src: url('webfonts/FuturaW01Medium.eot');
+    src: url('webfonts/FuturaW01Medium.eot?#iefix') format('embedded-opentype'),                        url('webfonts/FuturaW01Medium.woff') format('woff2'),                                url('webfonts/FuturaW01Medium.woff') format('woff'),                                  url('webfonts/FuturaW01Medium.ttf') format('truetype'),                              url('webfonts/FuturaW01Medium.svg') format('svg')
+}
+/**end fonts**/
+
+.file.file_inner span:after, .checkbox input + span a:after { position: absolute; bottom: 4px; left: 0; right: 0; height: 1px; background: rgba(255, 255, 255, 0.5); }
+
+body { font-family: "FuturaW01Light"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-transform: uppercase; font-size: 13px; line-height: 20px; color: #fff; }
+
+.is-desktop .out { background: none; }
+
+.header { position: absolute; top: 0; height: 50px; left: 0; right: 0; background: #fff; z-index: 0; }
+.header .header__in { padding: 13px 15px; max-width: 600px; margin: 0 auto; position: relative; }
+.header .header__back { position: absolute; left: 0; top: 12px; width: 46px; height: 26px; background: url(../img/back.png) no-repeat 0 0; background-size: contain; cursor: pointer; display: none; }
+
+.logo { position: absolute; top: 13px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+
+.title { position: relative; display: inline-block; margin-bottom: 25px; margin-top: 85px; font-size: 40px; text-transform: uppercase; font-family: "NeutrafaceCondensed-Titling"; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.is-desktop .main:before { background: none; }
+.main > section { position: relative; }
+
+body { background: #363357  }
+
+.link { position: relative; display: inline; color: #fff; text-transform: uppercase; font-size: 13px; text-decoration: none; }
+.link:after { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 100%; background: rgba(255, 255, 255, 0.5); }
+
+
+.final_video {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width: 230px;
+	height: 230px;
+}
+
+
+
+.h1 { line-height: 110%; font-size: 10px;color: #C2869F ; text-transform: uppercase; font-family: "FuturaW01Light"; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.connection_status { line-height: 110%; font-size: 10px;color: #ffffff ; text-transform: uppercase;  font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.connection_status a{color: #ffffff }
+
+.h2 {line-height: 35px; font-size: 24px; font-family: "FuturaBT-BoldCondensed"; }
+
+.h3 { margin-bottom: 20px; font-family: "NeutrafaceDisplayBold"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 13px; line-height: 20px; text-transform: uppercase; }
+
+
+
+.adaptive_submit { width: 230px; margin: 0 auto; }
+
+
+
+#soundboard{
+	position: fixed;
+	width: 100%;
+	height: 65%;
+	bottom: 50px;
+	z-index: 100;
+}
+
+#footer{
+    position: fixed;
+    height: 30px;
+    margin-bottom: 10px;
+    bottom: 0px;
+    z-index: 101;  
+}
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+	*{ -webkit-text-size-adjust: none; } 
+
+	.h2{ font-size: 24px; text-transform: uppercase; letter-spacing: 2px; }
+
+}
+
+@media only screen and (min-width: 600px){
+
+
+	.btn { display: inline-block; height: 40px; line-height: 40px; background: #fff; text-align: center; min-width: 400px; max-width: 100%; font-family: "NeutrafaceDisplayTitling"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; font-size: 12px; color: #241e50; }
+
+	.out{ background: none; }
+
+
+	.connection_status { font-size: 20px; }
+	.h1 { font-size: 20px; }
+	.h2{ margin-bottom: 20px; padding-top: 10px; font-size: 44px; text-transform: uppercase; font-family: "FuturaBT-BoldCondensed"; font-weight: normal; letter-spacing: 3px; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+	
+
+}
+#design_guide{
+	position: absolute;
+}
+
+
+.main { position: relative; margin-top: 50px;  text-align: center; z-index: 1; }
+.main:before { content: ""; position: absolute; top: 0; left: 0; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 100%; min-width: 600px; min-height: 100%;}
+
+.out { position: relative; }
+/*# sourceMappingURL=screen.css.map */
+
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+img {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.sound_btn {
+	position: 	absolute;
+	width:34%;
+	height:25%;
+	
+	border-top: 1px solid #363357; 
+	border-bottom: 1px solid #363357;
+	/*color: rgba(127,255,255,0.75);*/
+	background: #1a163c;
+	/*outline: 1px solid rgba(127,255,255,0.75);*/
+	/*border: 0px;*/
+	padding: 1px 1px;
+	cursor: pointer;
+
+	text-align: 	center;		
+
+}
+.sound_btn:active {
+	
+	background-color: #A00000;
+}
+.sound_btn:active img{
+	
+	content: url('../images/hover.png');
+}
+#btn_1:active img{content: url('../images/icons/1_hover.png');}
+#btn_2:active img{content: url('../images/icons/2_hover.png');}
+#btn_3:active img{content: url('../images/icons/3_hover.png');}
+#btn_4:active img{content: url('../images/icons/4_hover.png');}
+#btn_5:active img{content: url('../images/icons/5_hover.png');}
+#btn_6:active img{content: url('../images/icons/6_hover.png');}
+#btn_7:active img{content: url('../images/icons/7_hover.png');}
+#btn_8:active img{content: url('../images/icons/8_hover.png');}
+#btn_9:active img{content: url('../images/icons/9_hover.png');}
+#btn_10:active img{content: url('../images/icons/10_hover.png');}
+#btn_11:active img{content: url('../images/icons/11_hover.png');}
+#btn_12:active img{content: url('../images/icons/12_hover.png');}
+
+.btn_image{
+	position: 	relative;
+	height: 100%;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events:none;
+
+}
+
+.flipped{
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+
+
+.about{
+	text-decoration: none;
+	position: absolute;
+	right: 18px;
+	bottom: 15px;
+	color: black;
+}
+
+.btn_text{
+	position: absolute;
+	bottom: 0;
+	width: 100%;	
+	pointer-events:none;
+}
+#WhatsThatSound{
+	display: none;
+}
+
+
+/**/
+/*Popup styles*/
+.overlay_bg{
+	background: rgba(54,57,87, 0.7);
+	z-index: -200;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+}
+.overlay{
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*background: rgba(54,57,87, 0.7);*/
+	z-index: 200;
+}
+.popup{
+	overflow: auto;
+	/*height: 80%;*/
+
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	right: 20px;
+	background: #fff;
+
+	/*max-width: 600px;
+	position: relative;
+	margin: auto;
+	top: 70px;*/
+}
+
+.popup__close{
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background:  url('../images/close.png') no-repeat 50% 50%;
+	background-size: contain;
+}
+.popup__content{
+	padding: 24px;
+	color: #24204f;
+}
+
+.popup .btn{
+	display: block;
+	margin-bottom: 10px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background: #24204f;
+	color: #fff;
+	text-decoration: none;
+}
+.popup h2{
+	font-size: 24px;
+	color: #24204f;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.popup h3{
+	font-size: 18px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.2;
+	color: #24204f;
+	margin-bottom: 17px;
+}
+.popup p{
+	font-size: 12px;
+	text-transform: uppercase;
+	line-height: 20px;
+	margin: 15px 0;
+	text-align: center;
+}
+.popup p a{
+	color: #24204f;
+}
+.popup ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+.popup li{
+	border-top: 1px solid #e5e5e5;
+}
+.popup li a{
+	display: block;
+	padding: 6px 0 6px 10px;
+	color: #24204f;
+}
+
+#backLayer{
+	visibility: hidden;
+}
+
+#socks{
+	left: 500px;
+	top: -50px;
+	position: fixed;
+}
+
+#stick{
+	position: fixed;
+	top: -50px;
+	left: 80px;
+    width: 50px;
+}
+#redBall{
+	position: fixed;
+	left: 700px;
+	top: 130px;
+}
+.redBall {
+    position: fixed;
+	left: 800px;
+	top: 120px;
+}
+
+
+.blueBall{
+	position: fixed;
+	left: 700px;
+	top: 100px;
+}
+#backBalls .blueBall{
+	
+	left: 700px;
+	top: 50px;
+
+}
+
+#present{
+	position: fixed;
+	top: 80px;
+    width: 50px;
+}
+
+#contentLayer{
+	left: 0;
+	top: 0px;
+	/*margin-left: auto;*/
+}
+
+.out{
+	/* position: relative; */
+	overflow-x: hidden;
+	height: 100%;
+	position: inherit;
+}
+.main{
+		/*margin 0 auto;*/
+	/*margin-left: 25%;*/
+}
+body{
+
+	margin 0 auto;
+	 text-align center;
+}
+
+.layer img{
+	pointer-events:none;
+}
+
+.btn-action {
+    font-family: 'FuturaMedium';
+    text-align: center;
+    background-color: #fff;
+    color: #241e50;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding-top: 6px;    
+}
+.btn-action a {
+    text-decoration: none;
+    color: #241e50;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 770px){
+    .header, .main {
+        position: relative;
+    }
+    .main {
+        margin: -10px auto;
+    }
+    .logo {
+        top: 15px;
+    }
+    .btn_text {
+        font-size: 14px;
+    }
+    #socks{
+		width: 45px;
+        left: 500px;
+	    top: 20px;
+	}
+    #backBalls .blueBall {
+        display: none;
+    }
+    #stick{
+		width: 50px;
+        top: 20px;
+	    left: 70px;
+	}
+    #present{
+        top: 130px;
+    }
+    .redBall {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .header, .main {
+        position: relative;    
+    }
+    .main{
+        margin: -20px auto;
+    }
+  /*  .main {
+        margin-top: 30px;
+    }*/
+	#socks{
+		width: 30px;
+        left: 500px;
+	    top: 25px;
+	}
+    #backBalls .blueBall{
+	   left: 400px;
+	   top: 50px;
+    }
+    #backBalls .blueBall {
+        display: none;
+    }
+	#stick{
+		width: 30px;
+        top: 10px;
+	    left: 40px;
+	}
+	#redBall{
+		width: 12px;
+	}
+
+
+	.blueBall{
+		width: 12px;
+	}
+
+	#present{
+	   width: 30px;
+	}
+    .redBall {
+        display: none;
+    }
+    .btn_text {
+        font-size: 8px;
+    }
+    .btn-action {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    .h2 {
+        line-height: 26px;
+        font-size: 18px;
+        font-family: "FuturaBT-BoldCondensed";
+        letter-spacing: 2px;
+}
+}
+/*BUTTON*/
+
+
+
+	
+
+}
