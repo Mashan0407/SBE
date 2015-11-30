@@ -204,7 +204,7 @@ function findPos(obj) {
            audio.play(); // audio will load and then play
         };
 
-        document.addEventListener('click', onClick, false);
+        window.addEventListener('click', onClick, false);
         }
         /*end of iOS click event*/
 
