@@ -1,4 +1,5 @@
 
+
 if(window.innerHeight <380){
 	$('#betterPortrait').show();
 }
@@ -11,6 +12,7 @@ window.addEventListener("orientationchange", function() {
   	$('#betterPortrait').hide();
   }
 }, false);
+
 
 function findPos(obj) {
 
@@ -195,14 +197,14 @@ function findPos(obj) {
 	document.getElementById("bg").play();
 
 
-        /*iOS click event
+        /*iOS click event*/
             
         if(window.innerHeight <380){
-	   var onClick = function() {
-           audio.play();; // audio will load and then play
+	       var onClick = function() {
+           audio.play(); // audio will load and then play
         };
 
-        window.addEventListener('click', onClick, false);
+        document.addEventListener('click', onClick, false);
         }
         /*end of iOS click event*/
 
