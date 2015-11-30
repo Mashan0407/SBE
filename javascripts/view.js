@@ -19,7 +19,7 @@ if(window.innerHeight <380){
 
 
         window.onclick = function(){
-        	audio.play();}
+        	audio.play();
         }
 }
 
