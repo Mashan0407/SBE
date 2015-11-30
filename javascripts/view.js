@@ -22,11 +22,9 @@ if(window.innerHeight <380){
         /*iOS click event*/
             
         if(window.innerHeight <380){
-	   var onClick = function() {
-           audio.play();; // audio will load and then play
-        };
 
-        window.addEventListener('click', onClick, false);
+        window.onclick = function(){
+        	audio.play();}
         }
 }
 
