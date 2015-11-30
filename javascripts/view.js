@@ -24,7 +24,6 @@ window.addEventListener("orientationchange", function() {
 
 
         document.onclick = function(){
-        this.getElementById("bg").load();
 	this.getElementById("bg").play();
         }
   }else{
