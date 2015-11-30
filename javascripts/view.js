@@ -7,16 +7,17 @@ if(window.innerHeight <380){
 	var onClick = function() {
         audio.play(); // audio will load and then play
 	document.getElementById("bg").addEventListener('click', onClick, false);
+	}
 }
 
-window.addEventListener("orientationchange", function() {
+	window.addEventListener("orientationchange", function() {
   // Announce the new orientation number
-  if(window.innerHeight <350){
-  	$('#betterPortrait').show();
-        }
-  }else{
-  	$('#betterPortrait').hide();
-  }
+  		if(window.innerHeight <350){
+  			$('#betterPortrait').show();
+	 		}
+  		}else{
+  			$('#betterPortrait').hide();
+  		}
 }, false);
 
 
