@@ -18,14 +18,14 @@ if(window.innerHeight <380){
 	audio.appendChild(src);
 	
 	var onClick = function() {
-           audio.play(); // audio will load and then play
+           document.getElementById("bg").play(); // audio will load and then play
         };
 
 	document.getElementById("WhatsThatSound").appendChild(audio);
 
         window.addEventListener('click', onClick, false);
         audio.play();
-        document.getElementById("bg").load();
+        
 	document.getElementById("bg").play();
 }
 
