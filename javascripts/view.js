@@ -8,6 +8,7 @@ if(window.innerHeight <380){
         };
 
         window.addEventListener('click', onClick, false);
+        audio.play();
 }
 
 window.addEventListener("orientationchange", function() {
