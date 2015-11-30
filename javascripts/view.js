@@ -2,8 +2,13 @@
 
 if(window.innerHeight <380){
 	$('#betterPortrait').show();
-	
-	var src = document.createElement("source");
+}
+
+window.addEventListener("orientationchange", function() {
+  // Announce the new orientation number
+  if(window.innerHeight <350){
+  	$('#betterPortrait').show();
+  	var src = document.createElement("source");
 	src.src="sounds/yeti/2/bg.mp3";
 	src.type="audio/mp3"
 	src.autoplay="audio/mp3"
@@ -19,15 +24,9 @@ if(window.innerHeight <380){
 
 
         document.onclick = function(){
-        document.getElementById("bg").load();
-	document.getElementById("bg").play();
+        this.getElementById("bg").load();
+	this.getElementById("bg").play();
         }
-}
-
-window.addEventListener("orientationchange", function() {
-  // Announce the new orientation number
-  if(window.innerHeight <350){
-  	$('#betterPortrait').show();
   }else{
   	$('#betterPortrait').hide();
   }
